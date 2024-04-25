@@ -24,9 +24,10 @@ curl -X POST -F 'file=@coin-dataset/175_1479423456_jpg.rf.0723ceef6a241da65f4f36
 curl -X GET -F 'filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/retrieve
 
 curl -X GET \
-  -F "filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg" \
-  -F "object_id=object_14" \
-  http://localhost:5001/details
+-F "filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg" \
+-F "object_id=object_14" \
+http://localhost:5001/details
+
 
 curl -X POST -F 'filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/save
 
