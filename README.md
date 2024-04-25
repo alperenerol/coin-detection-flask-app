@@ -7,12 +7,14 @@ This project is a Flask-based application designed to detect coins in images usi
 Clone the repository and build the Docker image:
 
 git clone https://github.com/alperenerol/coin-detection-flask-app.git
+
 cd coin-detection-flask-app
+
 docker build -t flask-app .      
 
 ## Running the Application
 Run the Docker container using:
-docker run -p 5001:5001 flask-coin-detection
+docker run -p 5001:5001 flask-app
 
 ## Usage
 Submit an image for processing:
