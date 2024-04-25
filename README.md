@@ -21,14 +21,14 @@ Submit an image for processing:
 
 curl -X POST -F 'file=@coin-dataset/175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/upload
 
-curl -X POST -F 'filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/retrieve
+curl -X GET -F 'filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/retrieve
 
-curl -X POST \
+curl -X GET \
   -F "filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg" \
   -F "object_id=object_14" \
   http://localhost:5001/details
 
-  curl -X POST -F 'filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/save
+curl -X POST -F 'filename=175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg' http://localhost:5001/save
 
-  # Masked Image Display
-  python display_app.py coin-dataset/175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg
+# Masked Image Display
+python scripts/display_app.py coin-dataset/175_1479423456_jpg.rf.0723ceef6a241da65f4f36db2132002b.jpg

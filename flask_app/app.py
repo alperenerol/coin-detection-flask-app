@@ -47,7 +47,7 @@ def upload_image():
     else:
         return jsonify({"error": "File type not allowed"}), 400
 
-@app.route('/retrieve', methods=['POST'])
+@app.route('/retrieve', methods=['GET'])
 def retrieve_image():
     filename = request.form.get('filename')
     if filename is None or filename.strip() == "":
@@ -75,7 +75,7 @@ def retrieve_image():
         return jsonify({"error": "File not found"}), 404
 
 
-@app.route('/details', methods=['POST'])
+@app.route('/details', methods=['GET'])
 def object_details():
     filename = request.form.get('filename')
     object_id = request.form.get('object_id')
